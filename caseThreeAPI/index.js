@@ -9,12 +9,6 @@ app.use(express.urlencoded({ extended: true }));
 
 app.get("/home", async (req, res) => {
   try {
-    //     let query = `select du.country , sum(db.total_buy) as total_buy
-    // from data_user du
-    // join data_belanja db on du.id = db.id
-    // group by du.country
-    // order by total_buy DESC`;
-
     let query = `select * from users du`;
 
     let getData = await sequelize.query(query);
@@ -40,8 +34,6 @@ app.get("/filter", async (req, res) => {
     join data_belanja db on du.id = db.id
     group by du.country
     order by total_buy DESC`;
-
-    // let query = `select * from data_user du`;
 
     let getData = await sequelize.query(query);
     getData = getData[0];
