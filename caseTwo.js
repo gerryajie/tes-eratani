@@ -1,4 +1,4 @@
-function solution(inputString) {
+function palindrome(inputString) {
   const lengthString = inputString.length;
   const median = Math.floor(lengthString / 2);
 
@@ -10,6 +10,6 @@ function solution(inputString) {
   return inputString + " Itu Palindrome";
 }
 
-console.log(solution("kodokkodok"));
-console.log(solution("jinggaaku"));
-console.log(solution("123321"));
+console.log(palindrome("kodokkodok"));
+console.log(palindrome("jinggaaku"));
+console.log(palindrome("123321"));
